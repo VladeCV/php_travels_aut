@@ -1,10 +1,11 @@
 package page;
 
 import control.Label;
+import enums.MenuOption;
 import org.openqa.selenium.By;
 
 public class MenuSection {
-    public Label menuOption(String menuOption) {
-        return new Label(By.linkText("menuOption"));
+    public Label getMenuOptionLocator(MenuOption menuOption) {
+        return new Label(By.linkText(menuOption.getMenuOption()));
     }
 }

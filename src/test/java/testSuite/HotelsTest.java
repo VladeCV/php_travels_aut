@@ -10,7 +10,9 @@ public class HotelsTest extends TestBase {
     public void verifyBookingHotels() throws InterruptedException {
         menuSection.getMenuOptionLocator(HOTELS).click();
         hotelsPage.searchByCityLabel.click();
-        searchByCitySection.searchCityTxtBox.setTextEnter("Dubai");
+        searchByCitySection.searchCityTxtBox.setText("Dubai");
+        Thread.sleep(2000);
+        searchByCitySection.getCityLocator("Dubai").click();
         hotelsPage.checkinTxtBox.setText("10-10-2024");
         hotelsPage.checkinTxtBox.click();
         hotelsPage.checkoutTxtBox.setText("15-10-2024");
@@ -20,6 +22,8 @@ public class HotelsTest extends TestBase {
         travelersRoomsSection.adultsNumberTxtBox.setText("2");
         hotelsPage.travelersRoomsLabel.click();
         hotelsPage.searchButton.click();
+
+
 
         Thread.sleep(5000);
 //        Assertions.assertEquals(hotelsPage.searchByCity.getSelectedText(), "Delhi India", "No se muestra el pais");

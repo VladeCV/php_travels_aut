@@ -2,10 +2,7 @@ package testSuite;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import page.HotelsPage;
-import page.MenuSection;
-import page.SearchByCitySection;
-import page.TravelersRoomsSection;
+import page.*;
 import session.Session;
 import util.GetProperties;
 
@@ -16,6 +13,7 @@ public class TestBase {
     HotelsPage hotelsPage = new HotelsPage();
     SearchByCitySection searchByCitySection = new SearchByCitySection();
     TravelersRoomsSection travelersRoomsSection = new TravelersRoomsSection();
+    SearchDestinySection searchDestinySection = new SearchDestinySection();
 
     @BeforeEach
     public void setUp() {

@@ -13,6 +13,7 @@ public class TestBase {
     HotelsPage hotelsPage = new HotelsPage();
     SearchByCitySection searchByCitySection = new SearchByCitySection();
     TravelersRoomsSection travelersRoomsSection = new TravelersRoomsSection();
+    InfoHotelPage infoHotelPage = new InfoHotelPage();
     SearchDestinySection searchDestinySection = new SearchDestinySection();
 
     @BeforeEach

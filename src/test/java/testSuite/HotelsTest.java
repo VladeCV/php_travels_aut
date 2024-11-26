@@ -22,7 +22,9 @@ public class HotelsTest extends TestBase {
         travelersRoomsSection.adultsNumberTxtBox.setText("2");
         hotelsPage.travelersRoomsLabel.click();
         hotelsPage.searchButton.click();
-
+        hotelsPage.getViewMoreHotelButton("Armani Hotel Dubai").click();
+        Assertions.assertEquals("Armani Hotel Dubai", infoHotelPage.getNameHotelLabel("Armani Hotel Dubai").getText(), "It isn't the chosen hotel");
+        infoHotelPage.bookNowButton.click();
 
 
         Thread.sleep(5000);

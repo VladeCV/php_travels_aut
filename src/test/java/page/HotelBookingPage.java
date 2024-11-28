@@ -9,8 +9,9 @@ public class HotelBookingPage {
     public TextBox emailTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[email]')]"));
     public TextBox phoneTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[phone]')]"));
     public TextBox addressTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[address]')]"));
-    public Label currentCountryLabel = new Label(By.xpath("//select[contains(@name, 'user[nationality]')]//following-sibling::button"));
+    public Label currentCountryLabel = new Label(By.xpath("//select[contains(@name, 'user[nationality]')]//parent::div"));
     public TextBox searchCountryTxtBox = new TextBox(By.xpath("//strong[contains(text(), 'Current Country')]//parent::label//following-sibling::div//input"));
+    public Label paymentMethodsLabel = new Label(By.xpath("//h3[text() = 'Payment Methods']"));
     public CheckBox agreeTermsConditionCheckBox = new CheckBox(By.id("agreechb"));
     public Button bookingConfirmButton = new Button(By.id("booking"));
 
@@ -28,10 +29,10 @@ public class HotelBookingPage {
     }
 
     public TextBox lastNameTraveler(int index) {
-        return new TextBox(By.xpath("//input[@name = 'firstname_"+index+"']"));
+        return new TextBox(By.xpath("//input[@name = 'lastname_"+index+"']"));
     }
 
     public Button selectPaymentMethods(String paymentMethod) {
-        return new Button(By.xpath("//strong[contains(text(), '"+paymentMethod+"')]//parent::span//preceding-sibling::input"));
+        return new Button(By.xpath("//strong[contains(text(), '"+paymentMethod.toLowerCase()+"')]//parent::span//ancestor::div[@id = 'pills-home-tab']"));
     }
 }

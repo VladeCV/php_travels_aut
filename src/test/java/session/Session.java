@@ -1,6 +1,7 @@
 package session;
 
 import browser.FactoryBrowser;
+import control.Control;
 import org.openqa.selenium.WebDriver;
 import util.GetProperties;
 
@@ -25,5 +26,9 @@ public class Session {
     public void closeSession() {
         browser.quit();
         instance = null;
+    }
+
+    public void switchFrame(Control controlFrame) {
+        Session.getInstance().getBrowser().switchTo().frame(controlFrame.getWebElement());
     }
 }

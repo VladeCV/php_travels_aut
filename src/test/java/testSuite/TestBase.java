@@ -14,6 +14,9 @@ public class TestBase {
     SearchByCitySection searchByCitySection = new SearchByCitySection();
     TravelersRoomsSection travelersRoomsSection = new TravelersRoomsSection();
     InfoHotelPage infoHotelPage = new InfoHotelPage();
+    HotelBookingPage hotelBookingPage = new HotelBookingPage();
+    InvoicePage invoicePage = new InvoicePage();
+    BankTransferPaymentPage bankTransferPaymentPage = new BankTransferPaymentPage();
     SearchDestinySection searchDestinySection = new SearchDestinySection();
 
     @BeforeEach

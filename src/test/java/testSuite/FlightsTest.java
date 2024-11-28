@@ -2,6 +2,10 @@ package testSuite;
 
 import enums.MenuOption;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class FlightsTest extends TestBase {
     @Test
@@ -31,7 +35,17 @@ public class FlightsTest extends TestBase {
 
         //Search flight
         searchDestinySection.searchButton.click();
-;
 
+        //Select Emirates Airline
+        selectFlightSection.emiratesAirlineButton.click();
+        //Select direct flight
+        selectFlightSection.directFlightButton.click();
+        //Select high to low
+        selectFlightSection.highToLowButton.click();
+        Thread.sleep(2000);
+
+        //Select the most expensive flight
+        selectFlightSection.topFlightButton.click();
+        Thread.sleep(1000);
     }
 }

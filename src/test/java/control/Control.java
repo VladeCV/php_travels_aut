@@ -16,7 +16,7 @@ public class Control {
         this.locator = locator;
     }
 
-    protected void find() {
+    public void find() {
         control = Session.getInstance().getBrowser().findElement(this.locator);
     }
 

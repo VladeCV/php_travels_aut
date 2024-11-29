@@ -9,15 +9,12 @@ public class HotelBookingPage {
     public TextBox emailTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[email]')]"));
     public TextBox phoneTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[phone]')]"));
     public TextBox addressTxtBox = new TextBox(By.xpath("//input[contains(@name, 'user[address]')]"));
-    public Label currentCountryLabel = new Label(By.xpath("//select[contains(@name, 'user[nationality]')]//parent::div"));
+    public Label currentCountryLabel = new Label(By.xpath("//select[contains(@name, 'user[country_code]')]//following-sibling::button"));
     public TextBox searchCountryTxtBox = new TextBox(By.xpath("//strong[contains(text(), 'Current Country')]//parent::label//following-sibling::div//input"));
     public Label paymentMethodsLabel = new Label(By.xpath("//h3[text() = 'Payment Methods']"));
     public CheckBox agreeTermsConditionCheckBox = new CheckBox(By.id("agreechb"));
     public Button bookingConfirmButton = new Button(By.id("booking"));
-
-    public Label selectCountryOfListLabel(String country) {
-        return new Label(By.xpath("//strong[contains(text(), 'Current Country')]//parent::label//following-sibling::div//span[contains(text(), '"+country+"')]"));
-    }
+    public Label totalPriceLabel = new Label(By.name("total_price"));
 
     public void selectTitle(int index, String title) {
         SelectControl titleLabel = new SelectControl(By.xpath("//select[@name = 'title_"+index+"']"));

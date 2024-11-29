@@ -1,6 +1,7 @@
 package control;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 
 public class TextBox extends Control {
@@ -12,5 +13,12 @@ public class TextBox extends Control {
         this.find();
         this.control.clear();
         this.control.sendKeys(value);
+    }
+
+    public void setTextAndEnter(String value) {
+        this.find();
+        this.control.clear();
+        this.control.sendKeys(value);
+        this.control.sendKeys(Keys.ENTER);
     }
 }

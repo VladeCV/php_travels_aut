@@ -2,6 +2,7 @@ package testSuite;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import util.JavaScriptUtil;
 import util.ScrollUtil;
 
 import static enums.MenuOption.HOTELS;
@@ -35,9 +36,8 @@ public class HotelsTest extends TestBase {
         hotelBookingPage.emailTxtBox.setText("prueba_carlos@gmail.com");
         hotelBookingPage.phoneTxtBox.setText("7894561");
         hotelBookingPage.addressTxtBox.setText("Av. Costanera");
-//        hotelBookingPage.currentCountryLabel.click();
-//        hotelBookingPage.searchCountryTxtBox.setText("Bolivia");
-//        hotelBookingPage.selectCountryOfListLabel("Bolivia");
+        hotelBookingPage.currentCountryLabel.click();
+        hotelBookingPage.searchCountryTxtBox.setTextAndEnter("Bolivia");
 
         // Datos de entrada
         String[][] datosPersonas = {
@@ -64,11 +64,26 @@ public class HotelsTest extends TestBase {
 
         hotelBookingPage.agreeTermsConditionCheckBox.check();
 
+//        ScrollUtil.scrollToElement(hotelBookingPage.totalPriceLabel);
+        String totalPrice = hotelBookingPage.totalPriceLabel.getAttribute("value");
+
         hotelBookingPage.bookingConfirmButton.click();
 
-        Assertions.assertTrue(invoicePage.payTitleLabel.isDisplayed(), "The element is not displayed");
+        Assertions.assertTrue(invoicePage.payTitleLabel.waitVisibility(10).isDisplayed(), "The element is not displayed");
+
+        String totalPriceInvoice = invoicePage.totalPriceInvoiceLabel.getText();
+
+        // Comparing Prices
+        double total = Double.parseDouble(totalPrice);
+        double invoice = Double.parseDouble(totalPriceInvoice);
+
+        Assertions.assertEquals(total, invoice, "The price do not match.");
 
         invoicePage.proceedButton.click();
+
+
+
+
 
 //        paypalPaymentPage.iframePaypal.waitVisibility(10);
 //        Session.getInstance().switchFrame(paypalPaymentPage.iframePaypal);

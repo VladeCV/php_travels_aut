@@ -35,6 +35,11 @@ public class Control {
         return this.control.getText();
     }
 
+    public String getAttribute(String attribute) {
+        this.find();
+        return this.control.getAttribute(attribute);
+    }
+
     public Boolean isDisplayed() {
         this.find();
         return this.control.isDisplayed();

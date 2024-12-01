@@ -19,6 +19,8 @@ public class TestBase {
     BankTransferPaymentPage bankTransferPaymentPage = new BankTransferPaymentPage();
     SearchDestinySection searchDestinySection = new SearchDestinySection();
     SelectFlightSection selectFlightSection = new SelectFlightSection();
+    PersonalInformationSection personalInformationSection = new PersonalInformationSection();
+    TravellerInformationSection travellerInformationSection = new TravellerInformationSection();
 
     @BeforeEach
     public void setUp() {

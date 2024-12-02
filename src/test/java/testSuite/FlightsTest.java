@@ -4,6 +4,7 @@ import enums.MenuOption;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import page.PaymentSection;
 import util.ScrollUtil;
 
 import java.util.List;
@@ -85,9 +86,18 @@ public class FlightsTest extends TestBase {
             travellerInformationSection.getExpirationYearSelectControl(i).selectByValue("2025");
             Thread.sleep(1000);
             ScrollUtil.scrollBy(0, 500);
-
-
         }
+
+        //Choose payment method
+        paymentSection.paylaterButton.click();
+        ScrollUtil.scrollBy(0, 1000);
+        Thread.sleep(2000);
+
+        //Accept terms and conditions
+        paymentSection.termsAndConditionsButton.click();
+        //Confirm booking
+        paymentSection.confirmBookingButton.click();
+        Thread.sleep(8000);
 
 
     }

@@ -21,6 +21,7 @@ public class TestBase {
     SelectFlightSection selectFlightSection = new SelectFlightSection();
     PersonalInformationSection personalInformationSection = new PersonalInformationSection();
     TravellerInformationSection travellerInformationSection = new TravellerInformationSection();
+    PaymentSection paymentSection = new PaymentSection();
     VisaPage visaPage = new VisaPage();
     SubmissionFormPage submissionFormPage = new SubmissionFormPage();
     SubmittedPage submittedPage = new SubmittedPage();

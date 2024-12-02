@@ -13,8 +13,8 @@ public class ProxyChrome implements IBrowser {
     public WebDriver createBrowser() {
         WebDriverManager.chromedriver().setup();
         Proxy proxy = new Proxy();
-        proxy.setHttpProxy("127.0.0.1:9090");
-        proxy.setSslProxy("127.0.0.1:9090");
+        proxy.setHttpProxy("127.0.0.1:8080");
+        proxy.setSslProxy("127.0.0.1:8080");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--ignore-certificate-errors");
         chromeOptions.setProxy(proxy);

@@ -7,7 +7,7 @@ import util.GetProperties;
 
 public class Session {
     private static Session instance = null;
-    private final WebDriver browser;
+    private WebDriver browser;
 
     private Session() {
         browser = FactoryBrowser.make(GetProperties.getInstance().getBrowser()).createBrowser();
@@ -30,5 +30,9 @@ public class Session {
 
     public void switchFrame(Control controlFrame) {
         Session.getInstance().getBrowser().switchTo().frame(controlFrame.getWebElement());
+    }
+
+    public void setBrowser(WebDriver browser) {
+        this.browser = browser;
     }
 }

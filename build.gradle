@@ -16,6 +16,12 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-suite")
     implementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
     implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+    testImplementation 'io.qameta.allure:allure-junit5:2.29.0'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    implementation 'io.rest-assured:json-path:5.5.0'
+    implementation 'io.rest-assured:json-schema-validator:5.5.0'
+    implementation 'io.rest-assured:rest-assured-common:5.5.0'
+    testImplementation 'io.rest-assured:rest-assured-all:5.5.0'
 }
 
 test {

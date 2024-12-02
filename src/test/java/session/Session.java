@@ -7,7 +7,7 @@ import util.GetProperties;
 
 public class Session {
     private static Session instance = null;
-    private WebDriver browser;
+    private final WebDriver browser;
 
     private Session() {
         browser = FactoryBrowser.make(GetProperties.getInstance().getBrowser()).createBrowser();

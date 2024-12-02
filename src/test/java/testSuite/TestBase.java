@@ -25,6 +25,7 @@ public class TestBase {
     VisaPage visaPage = new VisaPage();
     SubmissionFormPage submissionFormPage = new SubmissionFormPage();
     SubmittedPage submittedPage = new SubmittedPage();
+    InvoiceDetailsPage invoiceDetailsPage = new InvoiceDetailsPage();
 
     @BeforeEach
     public void setUp() {

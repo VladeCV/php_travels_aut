@@ -9,9 +9,13 @@ import util.ScrollUtil;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class FlightsTest extends TestBase {
     @Test
     public void verifyBookingFlights() throws InterruptedException {
+        String date = "06-12-2024";
+
         menuSection.getMenuOptionLocator(MenuOption.FLIGHTS).click();
         //Select one way
         searchDestinySection.oneWayButton.click();
@@ -38,10 +42,15 @@ public class FlightsTest extends TestBase {
         //Search flight
         searchDestinySection.searchButton.click();
 
+
         //Select Emirates Airline
         selectFlightSection.emiratesAirlineButton.click();
         //Select direct flight
         selectFlightSection.directFlightButton.click();
+
+        List<WebElement> flights = selectFlightSection.getFlightList();
+        assertFalse(flights.isEmpty(), "No flights found");
+
         //Select high to low
         selectFlightSection.highToLowButton.click();
         Thread.sleep(2000);
@@ -99,6 +108,13 @@ public class FlightsTest extends TestBase {
         paymentSection.confirmBookingButton.click();
         Thread.sleep(8000);
 
+        assertTrue(invoiceDetailsPage.bookingStatus.isDisplayed(), "Booking status not displayed");
+
+        assertTrue(invoiceDetailsPage.bookingDate.isDisplayed(), "Booking date is incorrect");
+
+        assertEquals(invoiceDetailsPage.airlineName.getText(), "Emirates", "Airline name is incorrect");
+
+        assertEquals(invoiceDetailsPage.dateOfFlight.getText(), date,"Date of flight is incorrect");
 
     }
 }

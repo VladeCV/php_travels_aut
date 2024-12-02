@@ -62,6 +62,7 @@ public class HotelsTest extends TestBase {
         ScrollUtil.scrollToElement(hotelBookingPage.paymentMethodsLabel);
         hotelBookingPage.selectPaymentMethods("Bank Transfer").click();
 
+        ScrollUtil.scrollToElement(hotelBookingPage.agreeTermsConditionCheckBox);
         hotelBookingPage.agreeTermsConditionCheckBox.check();
 
 //        ScrollUtil.scrollToElement(hotelBookingPage.totalPriceLabel);
@@ -81,17 +82,9 @@ public class HotelsTest extends TestBase {
 
         invoicePage.proceedButton.click();
 
+        Assertions.assertTrue(bankInformationPage.bankInformationLabel.waitVisibility(10).isDisplayed(), "The information page is not displayed");
 
 
-
-
-//        paypalPaymentPage.iframePaypal.waitVisibility(10);
-//        Session.getInstance().switchFrame(paypalPaymentPage.iframePaypal);
-//
-//        paypalPaymentPage.paypalButton.click();
-
-
-        Thread.sleep(5000);
-//        Assertions.assertEquals(hotelsPage.searchByCity.getSelectedText(), "Delhi India", "No se muestra el pais");
+//        Thread.sleep(5000);
     }
 }

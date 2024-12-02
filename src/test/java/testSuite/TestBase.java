@@ -16,11 +16,14 @@ public class TestBase {
     InfoHotelPage infoHotelPage = new InfoHotelPage();
     HotelBookingPage hotelBookingPage = new HotelBookingPage();
     InvoicePage invoicePage = new InvoicePage();
-    BankTransferPaymentPage bankTransferPaymentPage = new BankTransferPaymentPage();
+    BankInformationPage bankInformationPage = new BankInformationPage();
     SearchDestinySection searchDestinySection = new SearchDestinySection();
     SelectFlightSection selectFlightSection = new SelectFlightSection();
     PersonalInformationSection personalInformationSection = new PersonalInformationSection();
     TravellerInformationSection travellerInformationSection = new TravellerInformationSection();
+    VisaPage visaPage = new VisaPage();
+    SubmissionFormPage submissionFormPage = new SubmissionFormPage();
+    SubmittedPage submittedPage = new SubmittedPage();
 
     @BeforeEach
     public void setUp() {

@@ -62,6 +62,8 @@ public class HotelsTest extends TestBase {
         ScrollUtil.scrollToElement(hotelBookingPage.paymentMethodsLabel);
         hotelBookingPage.selectPaymentMethods("Bank Transfer").click();
 
+        ScrollUtil.scrollBy(0, 500);
+        Thread.sleep(1000);
         ScrollUtil.scrollToElement(hotelBookingPage.agreeTermsConditionCheckBox);
         hotelBookingPage.agreeTermsConditionCheckBox.check();
 
@@ -84,7 +86,5 @@ public class HotelsTest extends TestBase {
 
         Assertions.assertTrue(bankInformationPage.bankInformationLabel.waitVisibility(10).isDisplayed(), "The information page is not displayed");
 
-
-//        Thread.sleep(5000);
     }
 }

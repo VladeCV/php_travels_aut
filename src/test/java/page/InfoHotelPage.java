@@ -13,4 +13,3 @@ public class InfoHotelPage {
     }
 }
 
-// Armani Hotel Dubai

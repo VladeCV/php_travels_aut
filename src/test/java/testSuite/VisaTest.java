@@ -17,8 +17,8 @@ public class VisaTest extends TestBase {
         visaPage.toCountryLabel.click();
         visaPage.toCountryTextBox.setText("Spain");
         visaPage.getCityLocator("Spain").waitVisibility(5).click();
-//        visaPage.dateLabel.click();
-//        visaPage.selectDate("05", "12", "2024");
+        visaPage.dateLabel.click();
+        visaPage.selectDate("9").click();
         visaPage.searchButton.click();
 
         // Submission Form Page
@@ -36,7 +36,6 @@ public class VisaTest extends TestBase {
         Thread.sleep(1000);
         ScrollUtil.scrollToElement(submissionFormPage.submitButton);
         submissionFormPage.submitButton.click();
-
 
         Assertions.assertEquals("Submitted", submittedPage.finalMessage.waitVisibility(10).getText(), "The process had errors");
 

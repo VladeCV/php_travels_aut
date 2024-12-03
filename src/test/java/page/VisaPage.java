@@ -17,7 +17,7 @@ public class VisaPage {
         return new Label(By.xpath("//li[contains(text(), '"+city+"')]"));
     }
 
-    public void selectDate(String day, String month, String year) {
-
+    public Label selectDate(String day) {
+        return new Label(By.xpath("//td[contains(@class, 'day') and text() = '"+day+"']"));
     }
 }

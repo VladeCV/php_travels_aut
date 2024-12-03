@@ -4,8 +4,8 @@ public class FactoryBrowser {
     public static IBrowser make(String browserType){
         IBrowser browser;
         switch (browserType.toLowerCase()) {
-            case "proxy":
-               browser = new ProxyChrome();
+            case "chrome":
+               browser = new Chrome();
                 break;
             default:
                 browser = new Chrome();

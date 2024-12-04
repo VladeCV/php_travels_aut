@@ -2,9 +2,7 @@ package testSuite;
 
 import enums.MenuOption;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import page.PaymentSection;
 import util.ScrollUtil;
 
 import java.util.List;

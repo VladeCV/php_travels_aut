@@ -1,11 +1,10 @@
-package page;
+package page.flights;
 
 import control.Button;
 import control.UnorderedList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class SelectFlightSection {

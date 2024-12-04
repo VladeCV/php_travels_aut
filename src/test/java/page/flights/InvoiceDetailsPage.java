@@ -1,4 +1,4 @@
-package page;
+package page.flights;
 
 import control.Label;
 import org.openqa.selenium.By;

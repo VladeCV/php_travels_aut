@@ -1,4 +1,4 @@
-package page;
+package page.hotels;
 
 import control.*;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package page;
+package page.home;
 
 import control.Label;
 import enums.MenuOption;

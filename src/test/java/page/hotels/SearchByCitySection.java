@@ -1,4 +1,4 @@
-package page;
+package page.hotels;
 
 import control.Label;
 import control.TextBox;

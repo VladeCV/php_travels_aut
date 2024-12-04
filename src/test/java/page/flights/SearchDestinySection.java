@@ -1,4 +1,4 @@
-package page;
+package page.flights;
 
 import control.Button;
 import control.SelectControl;

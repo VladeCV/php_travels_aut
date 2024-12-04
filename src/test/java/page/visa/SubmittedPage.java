@@ -1,4 +1,4 @@
-package page;
+package page.visa;
 
 import control.TextBox;
 import org.openqa.selenium.By;

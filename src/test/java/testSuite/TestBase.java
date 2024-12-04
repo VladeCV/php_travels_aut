@@ -2,7 +2,12 @@ package testSuite;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import page.*;
+import page.flights.*;
+import page.home.MenuSection;
+import page.hotels.*;
+import page.visa.SubmissionFormPage;
+import page.visa.SubmittedPage;
+import page.visa.VisaPage;
 import session.Session;
 import util.GetProperties;
 
